@@ -1,8 +1,9 @@
 const suits = [ 'hearts', 'spades', 'clubs', 'diamonds' ];
 const faceCards = [ 'jack', 'king', 'queen', 'ace' ];
-const deck = [];
 
 function makeDeck() {
+  const deck = [];
+
   for (const suit of suits) {
     for (let i = 2; i <= 10; i++) {
       deck.push({ suit, value: `${i}` });
@@ -12,6 +13,8 @@ function makeDeck() {
       deck.push({ suit, value: face });
     }
   }
+
+  return deck;
 }
 
-module.exports = deck;
+module.exports = makeDeck;
